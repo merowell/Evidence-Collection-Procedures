@@ -11,7 +11,7 @@
 <!-- A-FRAME -->
 <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> 
 <!-- include aframe-ar.js -->
-<script src="../build/aframe-ar.js"></script> 
+<script src="build/aframe-ar.js"></script> 
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script> 
 <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
 <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
@@ -83,22 +83,15 @@ AFRAME.registerComponent('vidhandler', {
 
 
 
-	<!-- option 1 -->
-    <a-marker type='pattern' url='https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/Patterns/Patt/pattern-ar-1-gold.patt'>
+	<!-- Narcotics-1 -->
+    <a-marker type='pattern' url='https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/markers/patt/narcotics-test.patt'>
         
         <!-- add .obj model-->
         <a-entity 
-        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.obj); 
-        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 180'>
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/3d-models/narcotics/narcotics.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/3d-models/narcotics/narcotics.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 0'>
         </a-entity>
-        <a-entity 
-        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.obj); 
-        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.mtl)' scale="0.1 0.1 0.1" position='0.0 .5 0'>
-        </a-entity>
-        <a-entity 
-        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.obj); 
-        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.mtl)' scale="0.3 0.3 0.3" position='0 0 0' rotation='0 0 0'>
-        </a-entity>
+        
     </a-marker>
 
 
