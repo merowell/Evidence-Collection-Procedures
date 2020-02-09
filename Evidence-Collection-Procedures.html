@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<!-- 
+  Property of CEV Multimedia
+
+  Experience created by Melody Rowell: https://github.com/merowell
+
+  Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
+-->
+
+<!-- A-FRAME -->
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> 
+<!-- include aframe-ar.js -->
+<script src="../build/aframe-ar.js"></script> 
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script> 
+<script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
+<script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+
+ <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+<!-- Latest compiled and minified CSS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- vidhandler component -->
+<script>
+AFRAME.registerComponent('vidhandler', {
+    schema: {
+      target: {type: 'string'}
+    },
+    init: function() {
+        this.videoNodes = document.querySelectorAll(this.data.target)
+    },
+    tick: function() {
+        if (this.el.object3D.visible == true) {
+            if (!this.toggle) {
+                this.toggle = true;
+                for (let i = 0; i < this.videoNodes.length; i++) {
+                    this.videoNodes[i].play();
+                } 
+            }
+        } else {
+            if (this.toggle) {
+              for (let i = 0; i < this.videoNodes.length; i++) {
+                this.videoNodes[i].pause();
+              }
+              this.toggle = false;
+            }
+        }
+    }
+});
+</script>
+
+<a-scene embedded arjs>
+
+	<!-- assets for vidhandler -->
+    <a-assets >
+        <!-- FOR NOTMAL VIDEO YOU CAN USE MP4 or WEBM BUT FOR ALPHA VIDEO YOU NEED TO USE .WEBM FORMAT-->
+
+        <video crossOrigin="Anonymous" Id="gold" preload="auto" loop="true"src="assets\textures\gold.webm">
+        </video>
+          
+        <video crossOrigin="Anonymous" Id="silver" preload="auto" loop="true"src="assets\textures\silver.webm">
+        </video>
+
+        <video crossOrigin="Anonymous" Id="bronze" preload="auto" loop="true"src="assets\textures\bronze.webm">
+        </video>
+          
+        <video crossOrigin="Anonymous" Id="textgold" preload="auto" loop="true" src="assets\textures\textgold.webm">
+        </video>
+
+        <video crossOrigin="Anonymous" Id="textsilver" preload="auto" loop="true" src="assets\textures\textsilver.webm">
+        </video>
+
+        <video crossOrigin="Anonymous" Id="textbronze" preload="auto" loop="true" src="assets\textures\textbronze.webm">
+        </video>
+
+        <video crossOrigin="Anonymous" Id="textTFP" preload="auto" loop="true" src="assets\textures\text-thanks-for-playing.webm">
+        </video>
+    </a-assets>
+
+
+
+
+
+
+
+
+	<!-- pattern-ar-1-gold -->
+    <a-marker vidhandler="target: #gold, #textgold" type='pattern' url='https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/Patterns/Patt/pattern-ar-1-gold.patt'>
+         <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .3 0' width='3.3' height='1.87' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#gold'></a-plane>
+
+        <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .7 0' width='1.5' height='1.5' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#textgold'></a-plane>
+   
+        <!-- add .obj model-->
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 180'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.mtl)' scale="0.1 0.1 0.1" position='0.0 .5 0'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.mtl)' scale="0.3 0.3 0.3" position='0 0 0' rotation='0 0 0'>
+        </a-entity>
+    </a-marker>
+
+
+
+
+
+
+
+
+
+    <!-- pattern-ar-2-silver -->
+    <a-marker  vidhandler="target: #silver, #textsilver" type='pattern' url='https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/Patterns/Patt/pattern-ar-2-silver.patt'>
+
+         <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .3 0' width='3.3' height='1.87' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#silver'></a-plane>
+
+        <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .7 0' width='1.5' height='1.5' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#textsilver'></a-plane>
+   
+        <!-- add .obj model-->
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 180'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.mtl)' scale="0.1 0.1 0.1" position='0.0 .5 0'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.mtl)' scale="0.3 0.3 0.3" position='0 0 0' rotation='0 0 0'>
+        </a-entity>
+    </a-marker>
+
+
+
+
+
+    <!-- pattern-ar-3-bronze -->
+    <a-marker vidhandler="target: #bronze, #textbronze" type='pattern' url='https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/Patterns/Patt/pattern-ar-3-bronze.patt'>
+    
+        <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .3 0' width='3.3' height='1.87'rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#bronze'></a-plane>
+
+        <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .7 0' width='1.5' height='1.5' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#textbronze'></a-plane>
+   
+        <!-- add .obj model-->
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 180'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.mtl)' scale="0.1 0.1 0.1" position='0.0 .5 0'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.mtl)' scale="0.3 0.3 0.3" position='0 0 0' rotation='0 0 0'>
+        </a-entity>
+    </a-marker>
+
+
+
+
+
+
+
+    <!-- pattern-ar-4 -->
+    <a-marker vidhandler="target: #textTFP" type='pattern' url='https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/Patterns/Patt/pattern-ar-4.patt'>
+
+        <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .7 0' width='1.5' height='1.5' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#textTFP'></a-plane>
+   
+        <!-- add .obj model-->
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 180'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.mtl)' scale="0.1 0.1 0.1" position='0.0 .5 0'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.mtl)' scale="0.3 0.3 0.3" position='0 0 0' rotation='0 0 0'>
+        </a-entity>
+    </a-marker>
+
+
+     <!-- pattern-ar-5 -->
+    <a-marker vidhandler="target: #textTFP" type='pattern' url='https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/Patterns/Patt/pattern-ar-5.patt'>
+
+        <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .7 0' width='1.5' height='1.5' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#textTFP'></a-plane>
+   
+        <!-- add .obj model-->
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 180'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.mtl)' scale="0.1 0.1 0.1" position='0.0 .5 0'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.mtl)' scale="0.3 0.3 0.3" position='0 0 0' rotation='0 0 0'>
+        </a-entity>
+    </a-marker>
+
+
+
+    <!-- pattern-ar-6 -->
+    <a-marker vidhandler="target: #textTFP" type='pattern' url='https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/Patterns/Patt/pattern-ar-6.patt'>
+
+        <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .7 0' width='1.5' height='1.5' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#textTFP'></a-plane>
+   
+        <!-- add .obj model-->
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 180'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.mtl)' scale="0.1 0.1 0.1" position='0.0 .5 0'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.mtl)' scale="0.3 0.3 0.3" position='0 0 0' rotation='0 0 0'>
+        </a-entity>
+    </a-marker>
+
+
+    <!-- pattern-ar-7 -->
+    <a-marker vidhandler="target: #textTFP" type='pattern' url='https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/Patterns/Patt/pattern-ar-7.patt'>
+
+        <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .7 0' width='1.5' height='1.5' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#textTFP'></a-plane>
+   
+        <!-- add .obj model-->
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 180'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.mtl)' scale="0.1 0.1 0.1" position='0.0 .5 0'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.mtl)' scale="0.3 0.3 0.3" position='0 0 0' rotation='0 0 0'>
+        </a-entity>
+    </a-marker>
+
+
+
+    <!-- pattern-ar-8 -->
+    <a-marker vidhandler="target: #textTFP" type='pattern' url='https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/Patterns/Patt/pattern-ar-8.patt'>
+
+        <!-- add transparent video (.webm) -->
+        <a-plane  position='0 .7 0' width='1.5' height='1.5' rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#textTFP'></a-plane>
+   
+        <!-- add .obj model-->
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/hollywood-star/hollywood-star.mtl)' scale="0.3 0.3 0.3" position='0.0 .5 0' rotation='0 0 180'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/circle/circle.mtl)' scale="0.1 0.1 0.1" position='0.0 .5 0'>
+        </a-entity>
+        <a-entity 
+        obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.obj); 
+        mtl: url(https://raw.githubusercontent.com/merowell/ACTE_2019/master/aframe/examples/assets/3d%20models/square/square.mtl)' scale="0.3 0.3 0.3" position='0 0 0' rotation='0 0 0'>
+        </a-entity>
+    </a-marker>
+
+
+
+	<!-- add a simple camera -->
+		<a-entity camera></a-entity>
+</a-scene>
+
+    <!-- add a play button -->
+      <div class="footer">
+     <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-left">
+           <div class="onebleft">
+              <button onclick="vidNodes()" class="btn btnskips">Play (CHROME)</button>
+           </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right">
+           <div class="onebright">
+              <button onclick="refrespage()" class="btn btnskips">Refresh</button>
+           </div>
+        </div>
+     </div>
+  </div>
+  <style>
+     .footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     color: white;
+     }
+     .onebleft{
+     padding: 5px 5px 5px 5px;
+     margin: 5px 15px 5px 5px ;
+     float: left;
+     z-index: 900000000000;
+     }
+     .onebright{
+     padding: 5px 5px 5px 5px;
+     margin: 5px 15px 5px 5px ;
+     float: right;
+     z-index: 900000000000;
+     }
+     .imgon{
+     width: 55px;
+     height: 55px;
+     background-color:white;
+     padding: 3px 2px 2px 2px !important;
+     }
+     .imgss{
+     width: 50px !important;
+     height:50px !important;
+     } 
+     .imgname{
+     font-size: 10px;
+     }
+     .header {
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     color: white;
+     }
+     .oneleft{
+     padding: 5px 5px 5px 5px;
+     margin: 5px 15px 5px 5px ;
+     float: left;
+     z-index: 900000000000;
+     }
+     body{
+     margin:0px;
+     overflow: hidden;
+     }
+     .resets{
+     background-color: rgba(51, 51, 51, 0.529);
+     color: #fff;
+     text-align: center;
+     border-radius: 2px;
+     height: 50px;
+     padding: 10px 10px 10px 10px;
+     position: fixed;
+     top: 10px;
+     text-align: center;
+     z-index: 9000000000;
+     bottom: 10px;
+     }
+     .btnskips{
+     background: rgba(0, 0, 0, 0.433);
+     color: white !important;
+     }
+     .btnskips:hover{
+     background: rgb(197, 197, 197);
+     }
+     #arjsDebugUIContainer{
+     display: none;
+     }
+     .a-enter-vr-button{
+     display: none !important;
+     }
+  </style>
+
+</html>
