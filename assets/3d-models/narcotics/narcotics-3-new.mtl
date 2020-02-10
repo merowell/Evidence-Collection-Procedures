@@ -1,5 +1,15 @@
-# Blender MTL File: 'narcotics-2.blend'
-# Material Count: 18
+# Blender MTL File: 'narcotics-3-new-new.blend'
+# Material Count: 20
+
+newmtl Kabyklos_cromas.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
 
 newmtl Krano_cromas1
 Ns 96.078431
@@ -49,14 +59,26 @@ Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
-illum 3
+illum 2
 
-newmtl None
-Ns 0
-Ka 0.000000 0.000000 0.000000
-Kd 0.8 0.8 0.8
-Ks 0.8 0.8 0.8
-d 1
+newmtl Material.004
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.505698 0.505698 0.505698
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Ranksluostis.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.189735 0.363673 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
 illum 2
 
 newmtl metal
