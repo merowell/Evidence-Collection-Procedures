@@ -8,59 +8,30 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+This experience is built with Chromebooks in mind, but any desktop with a webcam will work.
 
 ```
-Give examples
+Mac OS
+Windows
+Chromebook
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
+Download the zip folder to your desktop
 ```
-
-And repeat
-
 ```
-until finished
+expand the folder
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
 ```
-Give an example
+double click the .html file, and your webcam will automatically deploy
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [AR.JS](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Aframe](https://maven.apache.org/) - Dependency Management
 
 ## Contributing
 
