@@ -1,15 +1,5 @@
 # Blender MTL File: 'Wash_basin.blend'
-# Material Count: 5
-
-newmtl Material.001
-Ns 859.555771
-Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.800000 0.800000
-Ks 0.277273 0.277273 0.277273
-Ke 0.0 0.0 0.0
-Ni 1.450000
-d 1.000000
-illum 2
+# Material Count: 4
 
 newmtl Material.002
 Ns 506.250000
