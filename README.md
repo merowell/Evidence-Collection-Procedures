@@ -47,5 +47,5 @@ CEV Multimedia owns this product. This product may not be reproduced or used in 
 * Megan O'Quinn - Brand Manager
 * Whitney Welch - Project Coordinator
 * Melody Rowell - AR Developer
-* Jerome Etienne - Ar.Js open source code
+
 
