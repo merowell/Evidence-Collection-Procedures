@@ -40,7 +40,7 @@ double click the .html file, and your webcam will automatically deploy the exper
 
 ## License
 
-CEV Multimedia owns this product. This product may not be reproduced or used in any way. Please contact rowell.melody@cevmultimedia.com with any questions or requests.
+CEV Multimedia owns this product. This product may not be reproduced or used in any way. Please contact melody.rowell@cevmultimedia.com with any questions or requests.
 
 ## Acknowledgments
 
