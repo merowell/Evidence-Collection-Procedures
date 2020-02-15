@@ -17,8 +17,6 @@
 <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
-
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 
@@ -54,6 +52,21 @@ AFRAME.registerComponent('vidhandler', {
 });
 </script>
 
+<script>
+      AFRAME.registerComponent("depth-correction", {
+        init: function() {
+          this.el.addEventListener("model-loaded", e => {
+            let model = this.el.getObject3D("mesh");
+            model.traverse(node => {
+              if (node.isMesh) {
+                node.material.depthWrite = !node.material.transparent;
+              }
+            });
+          });
+        }
+      });
+    </script>
+
 
 
 
@@ -63,8 +76,7 @@ AFRAME.registerComponent('vidhandler', {
 
 <!-- Lighting -->
 <a-entity light="type: ambient; color: #BBB"></a-entity>
-<a-entity light="type: directional; color: #FFF; intensity: 0.4" position="-0.5 1 1"></a-entity>
-
+<a-entity light="type: directional; color: #FFF; intensity: 1" position="-0.5 1 1"></a-entity>
 
 <!-- Narcotics -->
 <a-marker type='pattern' url='https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/markers/patt/pattern-narcotics-1%20(1).patt'>   
@@ -108,9 +120,8 @@ AFRAME.registerComponent('vidhandler', {
 <a-marker type='pattern' url='https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/markers/patt/pattern-biological-1.patt'>
 
 <!-- add .gltf model-->
-    <a-entity gltf-model="https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/biological/biological.gltf" position="0 0 0" crossOrigin="anonymous" rotation="0 0 0" scale=".5 .5 .5">
-
-
+    <a-entity gltf-model="https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/biological/biological.gltf" scale=".3 .3 .3" depth-correction> 
+    </a-entity>
 
 </a-marker>
 
