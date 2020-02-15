@@ -15,6 +15,7 @@
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script> 
 <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
 <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
@@ -62,6 +63,7 @@ AFRAME.registerComponent('vidhandler', {
 <a-entity light="type: ambient; color: #BBB"></a-entity>
 <a-entity light="type: directional; color: #FFF; intensity: 0.4" position="-0.5 1 1"></a-entity>
 
+
 <!-- Narcotics -->
 <a-marker type='pattern' url='https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/markers/patt/pattern-narcotics-1%20(1).patt'>   
 
@@ -100,15 +102,14 @@ AFRAME.registerComponent('vidhandler', {
 
 
 
-<!-- biological -->
+<!-- biological marker -->
 <a-marker type='pattern' url='https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/markers/patt/pattern-biological-1.patt'>
 
-        <!-- add .obj model-->
-            <a-entity   shadow="cast: true" gltf-model="https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/biological/biological-TEST-new.gltf" position="0 0 0" crossOrigin="anonymous" response-type="arraybuffer"
-                rotation="0 0 0" scale="0.05 0.05 0.05">
+<!-- add .gltf model-->
+    <a-entity gltf-model="https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/biological/biological-1-cycles.gltf" position="0 0 0" crossOrigin="anonymous" rotation="0 0 0" scale=".3 .3 .3">
 
+        <a-entity light="type: ambient; color: #BBB"></a-entity>
 
-        
 </a-marker>
 
 
