@@ -1,0 +1,12 @@
+# Blender MTL File: 'biological-1-cycles.blend'
+# Material Count: 1
+
+newmtl Material.009
+Ns 900.000000
+Ka 0.233766 0.233766 0.233766
+Kd 0.148227 0.116706 0.031165
+Ks 0.114286 0.114286 0.114286
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 0.903996
+illum 6
