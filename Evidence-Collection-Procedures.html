@@ -12,6 +12,7 @@
 <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> 
 <!-- include aframe-ar.js -->
 <script src="build/aframe-ar.js"></script> 
+
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script> 
 <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
 <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
@@ -119,18 +120,13 @@ AFRAME.registerComponent('vidhandler', {
 <!-- biological marker -->
 <a-marker type='pattern' url='https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/markers/patt/pattern-biological-1.patt'>
 
-<!-- add .gltf model-->
+    <!-- add .gltf model-->
     <a-entity gltf-model="https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/biological/label.gltf" scale=".45 .45 .45" position='-2 -.1 0' depth-correction> </a-entity>
 
-
-       <a-entity obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/biological/2newest%20bottle.obj); 
-    mtl: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/biological/2newest%20bottle.mtl)' scale="0.45 0.45 0.45" position='-2 -.1 0' >
+    <!-- add .obj model-->
+    <a-entity obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/biological/biological-wavefront.obj); 
+    mtl: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/biological/biological-wavefront.mtl)' scale="0.45 0.45 0.45" position='-2 -.1 0' >
     </a-entity>
-
-
-
-
-
 
 </a-marker>
 
