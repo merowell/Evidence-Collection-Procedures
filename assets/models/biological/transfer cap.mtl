@@ -1,0 +1,12 @@
+# Blender MTL File: 'biological-1-cycles-wav.blend'
+# Material Count: 1
+
+newmtl Material.008
+Ns 537.396706
+Ka 0.566234 0.566234 0.566234
+Kd 0.061656 0.061656 0.061656
+Ks 0.944156 0.944156 0.944156
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
