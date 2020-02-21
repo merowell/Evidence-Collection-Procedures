@@ -22,7 +22,9 @@ Android, all browswers
 ### Installing
 
 ```
-simply click on [this link](https://merowell.github.io/Evidence-Collection-Procedures/index.html) and experience will automatically deploy.
+Navigate to the following link, and the experience will automatically deploy
+```
+https://merowell.github.io/Evidence-Collection-Procedures/index.html)
 ```
 
 
