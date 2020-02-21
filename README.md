@@ -8,25 +8,23 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-This experience is built with Chromebooks in mind, but any desktop with a webcam will work. A webcam is necessary.
+This experience is built with Chromebooks in mind, but any desktop with a webcam will work. This experience also works on mobile devices.
 
 ```
-Mac OS
-Windows
-Chromebook
+Mac OS, all browsers
+Windows, all browsers
+Chromebook, Chrome browser
+iphone IOS 11 and above, Safari
+ipad IOS 11 and above, Safari
+Android, all browswers
 ```
 
 ### Installing
 
 ```
-Download the zip folder to your desktop
+simply click on [this link](https://merowell.github.io/Evidence-Collection-Procedures/index.html) and experience will automatically deploy.
 ```
-```
-expand the folder
-```
-```
-double click the .html file, and your webcam will automatically deploy the experience
-```
+
 
 ## Built With
 
