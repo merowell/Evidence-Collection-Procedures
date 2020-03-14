@@ -1,0 +1,107 @@
+# Blender MTL File: 'Fingerprints.blend'
+# Material Count: 10
+
+newmtl Black_metal_mia_material_x_passes1SG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.107335 0.107335 0.107335
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.158818 0.150108 0.145258
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl black_plastic_mia_material_x_passes2SG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\ProductionHP\\Desktop\\Evidence-Collection-Procedures\\assets\\blender\\Fingerprints\\Original Models\\black_knife_obj\\black_knife_obj\\burnished_steel_diffuse_noise.jpg
+
+newmtl burnished_steel_mia_material_x_passes3SG
+Ns 631.510375
+Ka 0.309091 0.309091 0.309091
+Kd 0.443179 0.443179 0.443179
+Ks 0.887013 0.887013 0.887013
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl dark_grey_plastic_mia_material_x_passesSG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\ProductionHP\\Desktop\\Evidence-Collection-Procedures\\assets\\blender\\Fingerprints\\Original Models\\black_knife_obj\\black_knife_obj\\burnished_steel_diffuse_noise.jpg
+
+newmtl polished_steel_mia_material_x_passesSG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.572922 0.572922 0.572922
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl satined_white_metal_mia_material_x_passes1SG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.192893 0.192893 0.192893
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl scabbard_back_mia_material_x_passes1SG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\ProductionHP\\Desktop\\Evidence-Collection-Procedures\\assets\\blender\\Fingerprints\\Original Models\\black_knife_obj\\black_knife_obj\\leather_back_diffuse.jpg
+
+newmtl scabbard_face_leather_mia_material_x_passes1SG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\ProductionHP\\Desktop\\Evidence-Collection-Procedures\\assets\\blender\\Fingerprints\\Original Models\\black_knife_obj\\black_knife_obj\\leather_back_simple_diffuse.jpg
+
+newmtl threads_mia_material_x_passes1SG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\ProductionHP\\Desktop\\Evidence-Collection-Procedures\\assets\\blender\\Fingerprints\\Original Models\\black_knife_obj\\black_knife_obj\\threads_bump.jpg
