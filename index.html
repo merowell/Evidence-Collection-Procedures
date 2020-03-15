@@ -9,25 +9,17 @@
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 
   <script src="build/aframe-ar.js"></script> 
-
 -->
 
 <!-- A-FRAME -->
 <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> 
-<!-- include aframe-ar.js -->
 
+<!-- ar.js -->
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script> 
 
-<script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
+<!-- add text -->
 <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
-<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-
-<!-- Latest compiled and minified CSS -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- vidhandler component -->
 <script>
@@ -58,6 +50,8 @@ AFRAME.registerComponent('vidhandler', {
 });
 </script>
 
+
+<!-- Allows for transparent gltf objects -->
 <script>
       AFRAME.registerComponent("depth-correction", {
         init: function() {
@@ -84,7 +78,6 @@ AFRAME.registerComponent('vidhandler', {
 
 <!-- Lighting -->
 <a-entity light="type: ambient; color: #BBB"></a-entity>
-
 <a-entity light="type: directional; color: #FFF; intensity: .2" position="0 2 0"></a-entity>
 <a-entity light="type: directional; color: #FFF; intensity: .6" position="2 1 0"></a-entity>
 
@@ -207,7 +200,20 @@ AFRAME.registerComponent('vidhandler', {
 
     <!-- add .gltf model-->
     <a-entity gltf-model="https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/Fingerprints/Fingerprints.gltf" scale=".5 .5 .5" position='0 0 .2'  depth-correction> </a-entity>
+</a-marker>
 
+
+
+
+
+    <!-- toxicology: test tubes and urine sample -->
+<a-marker type='pattern' url='https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/markers/patt/pattern-toxicology-01.patt'>
+
+        <!-- add .obj model-->
+    <a-entity 
+    obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/Toxicology/Toxicology.obj); 
+    mtl: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/Toxicology/Toxicology.mtl)' scale=".3 .3 .3" position='0 0 0' rotation='0 0 0'>
+    </a-entity>
 
 </a-marker>
 
