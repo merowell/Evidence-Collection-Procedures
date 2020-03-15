@@ -84,8 +84,9 @@ AFRAME.registerComponent('vidhandler', {
 
 <!-- Lighting -->
 <a-entity light="type: ambient; color: #BBB"></a-entity>
+
 <a-entity light="type: directional; color: #FFF; intensity: .2" position="0 2 0"></a-entity>
-<a-entity light="type: directional; color: #FFF; intensity: .4" position="2 1 0"></a-entity>
+<a-entity light="type: directional; color: #FFF; intensity: .6" position="2 1 0"></a-entity>
 
 
 <!-- Narcotics marker: pills and syringe -->
@@ -204,11 +205,8 @@ AFRAME.registerComponent('vidhandler', {
     <!-- fingerprints: knife with fingerprint -->
 <a-marker type='pattern' url='https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/markers/patt/pattern-fingerprints-01.patt'>
 
-        <!-- add .obj model-->
-    <a-entity 
-    obj-model= 'obj: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/Fingerprints/Fingerprints.obj); 
-    mtl: url(https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/Fingerprints/Fingerprints.mtl)' scale=".3 .3 .3" position='0 0 0' rotation='0 0 0'>
-    </a-entity>
+    <!-- add .gltf model-->
+    <a-entity gltf-model="https://raw.githubusercontent.com/merowell/Evidence-Collection-Procedures/master/assets/models/Fingerprints/Fingerprints.gltf" scale=".5 .5 .5" position='0 0 .2'  depth-correction> </a-entity>
 
 
 </a-marker>
